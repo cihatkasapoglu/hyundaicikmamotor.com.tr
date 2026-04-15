@@ -1,508 +1,208 @@
-```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyundai Çıkma Motor - Orijinal Çıkma Motor Parçaları Ankara</title>
-    <meta name="description" content="Hyundai çıkma motor, şanzıman ve orijinal yedek parça satış. Ayyıldız Sanayi Sitesi Yenimahalle Ankara. Hemen WhatsApp'tan fiyat al!">
-    <meta name="keywords" content="hyundai çıkma motor, hyundai yedek parça, ankara motorcu, çıkma şanzıman, hyundai motor fiyatları">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Hyundai Çıkma Motor - Ankara">
-    <meta property="og:description" content="Hyundai araçlar için orijinal çıkma motor ve yedek parça. Uygun fiyat garantisi!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.hyundaicikmamotor.com.tr">
-    
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Hyundai Çıkma Motor",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Serhat Mahallesi 1126. Cadde, Ayyıldız Sanayi Sitesi No:14",
-            "addressLocality": "Yenimahalle/Ankara",
-            "postalCode": "06200",
-            "addressCountry": "TR"
-        },
-        "telephone": ["0553 738 38 06", "0534 844 18 61"],
-        "url": "https://www.hyundaicikmamotor.com.tr"
-    }
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #ffffff;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
-            color: white;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-        
-        .contact-info {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .phone-btn {
-            background: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s;
-        }
-        
-        .phone-btn:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23ddd" d="M0 300 Q300 200 600 300 T1200 300 V600 H0 Z"/></svg>');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 100px 0;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        /* Products */
-        .products {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #333;
-        }
-        
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-        
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-        
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .product-image {
-            height: 250px;
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: #999;
-        }
-        
-        .product-info {
-            padding: 25px;
-        }
-        
-        .product-title {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        
-        .product-price {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #ff6b35;
-            margin-bottom: 20px;
-        }
-        
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-        }
-        
-        .modal-content {
-            background: white;
-            margin: 5% auto;
-            padding: 0;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-            animation: modalSlideIn 0.3s;
-        }
-        
-        @keyframes modalSlideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        .modal-header {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
-            color: white;
-            padding: 20px;
-            border-radius: 15px 15px 0 0;
-        }
-        
-        .modal-body {
-            padding: 30px;
-        }
-        
-        .close {
-            float: right;
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        
-        /* Add Product */
-        .add-product {
-            background: #f8f9fa;
-            padding: 50px 0;
-            text-align: center;
-        }
-        
-        .add-product-form {
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: #ff6b35;
-        }
-        
-        .add-btn {
-            background: linear-gradient(135deg, #ff6b35, #f7931e);
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        
-        .add-btn:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Blog */
-        .blog {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-        
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .blog-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .blog-image {
-            height: 200px;
-            background: #ddd;
-        }
-        
-        .blog-content {
-            padding: 25px;
-        }
-        
-        /* Footer */
-        footer {
-            background: #333;
-            color: white;
-            padding: 50px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        .footer-section h3 {
-            margin-bottom: 20px;
-            color: #ff6b35;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            .contact-info { flex-direction: column; text-align: center; }
-        }
-        
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background: #25D366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            animation: whatsapp-bounce 2s infinite;
-        }
-        
-        @keyframes whatsapp-bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hyundai Çıkma Motor | Cihat Hyundai Ankara</title>
+
+<meta name="description" content="Hyundai çıkma motor, sandık motor ve test edilmiş motorlar. Uygun fiyatlı garantili motor satış noktası Cihat Hyundai Ankara. Türkiye geneli kargo.">
+
+<meta name="keywords" content="hyundai çıkma motor, çıkma motor fiyatları, hyundai sandık motor, ankara çıkma motor">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f6f8;
+color:#222;
+}
+
+header{
+background:#0b1f3a;
+color:white;
+padding:20px;
+text-align:center;
+font-size:22px;
+font-weight:bold;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+background:white;
+}
+
+.hero h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+.hero p{
+color:#555;
+font-size:16px;
+}
+
+.btn{
+display:inline-block;
+margin:10px;
+padding:12px 18px;
+background:#007bff;
+color:white;
+text-decoration:none;
+border-radius:6px;
+font-weight:bold;
+}
+
+.btn.green{
+background:#25d366;
+}
+
+.section{
+padding:50px 20px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+text-align:left;
+}
+
+.card img{
+width:100%;
+border-radius:8px;
+}
+
+.card h3{
+margin:10px 0 5px;
+}
+
+footer{
+background:#0b1f3a;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25d366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+}
+
+.small{
+color:#666;
+font-size:14px;
+}
+
+</style>
+
 </head>
+
 <body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/905537383806" class="whatsapp-float" target="_blank">
-        <i>💬</i>
-    </a>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">🚗 Hyundai Çıkma Motor</div>
-                <div class="contact-info">
-                    <a href="tel:05537383806" class="phone-btn">📞 0553 738 38 06</a>
-                    <a href="https://wa.me/905537383806" class="phone-btn" target="_blank">💬 WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </header>
+<header>
+CİHAT HYUNDAI | ÇIKMA MOTOR
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Hyundai Çıkma Motor</h1>
-            <p>Orijinal çıkma motor ve yedek parça. Ankara Ayyıldız Sanayi Sitesi'nde hizmetinizde!</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/905537383806?text=Hyundai%20çıkma%20motor%20fiyatı%20almak%20istiyorum" class="phone-btn" style="padding:15px 30px; font-size:1.2rem;">💬 Hemen Fiyat Al</a>
-                <a href="#products" class="phone-btn" style="padding:15px 30px; font-size:1.2rem; background:#333;">🛒 Ürünleri Gör</a>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+<h1>Hyundai Çıkma Motor Satış Merkezi</h1>
+<p>Test edilmiş, garantili ve uygun fiyatlı Hyundai çıkma motorlar</p>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2 class="section-title">Popüler Ürünler</h2>
-            <div id="productsGrid" class="products-grid">
-                <!-- Ürünler JavaScript ile yüklenecek -->
-            </div>
-        </div>
-    </section>
+<a class="btn" href="tel:05537383806">Hemen Ara</a>
+<a class="btn green" href="https://wa.me/905537383806">WhatsApp Teklif Al</a>
+</section>
 
-    <!-- Add Product Section -->
-    <section class="add-product">
-        <div class="container">
-            <h2 class="section-title">Yeni Ürün Ekle</h2>
-            <form id="productForm" class="add-product-form">
-                <div class="form-group">
-                    <label>Ürün Adı</label>
-                    <input type="text" id="productName" required>
-                </div>
-                <div class="form-group">
-                    <label>Fiyat (TL)</label>
-                    <input type="number" id="productPrice" required>
-                </div>
-                <div class="form-group">
-                    <label>Açıklama</label>
-                    <textarea id="productDesc" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label>WhatsApp Numarası</label>
-                    <input type="tel" id="productPhone" value="05537383806" required>
-                </div>
-                <button type="submit" class="add-btn">➕ Ürün Ekle</button>
-            </form>
-        </div>
-    </section>
+<section class="section">
 
-    <!-- Blog Section -->
-    <section class="blog">
-        <div class="container">
-            <h2 class="section-title">Blog & Haberler</h2>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <div class="blog-image"></div>
-                    <div class="blog-content">
-                        <h3>Hyundai Çıkma Motor Alırken Nelere Dikkat Etmelisiniz?</h3>
-                        <p>Çıkma motor seçerken motor km'si, garanti durumu ve ekspertiz raporu çok önemli...</p>
-                        <a href="#" style="color:#ff6b35;">Devamını Oku →</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <div class="blog-image"></div>
-                    <div class="blog-content">
-                        <h3>Ankara'da En İyi Çıkma Parça Yerleri</h3>
-                        <p>Ayyıldız Sanayi Sitesi'nde Hyundai uzmanı olarak hizmet veriyoruz...</p>
-                        <a href="#" style="color:#ff6b35;">Devamını Oku →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<h2>Neden Bizi Tercih Etmelisiniz?</h2>
+<p class="small">Güvenilir motor tedariki ve Türkiye geneli hızlı gönderim</p>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Hyundai Çıkma Motor</h3>
-                    <p>Serhat Mahallesi 1126. Cadde<br>Ayyıldız Sanayi Sitesi No:14<br>06200 Yenimahalle/Ankara</p>
-                </div>
-                <div class="footer-section">
-                    <h3>İletişim</h3>
-                    <p>📞 0553 738 38 06<br>📞 0534 844 18 61<br>💬 WhatsApp</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Çalışma Saatleri</h3>
-                    <p>Pazartesi-Cumartesi<br>08:00 - 19:00</p>
-                </div>
-            </div>
-            <div style="text-align:center; padding-top:20px; border-top:1px solid #555;">
-                <p>&copy; 2024 Hyundai Çıkma Motor. Tüm hakları saklıdır.</p>
-            </div>
-        </div>
-    </footer>
+<div class="grid">
+<div class="card">✔ Test Edilmiş Motorlar</div>
+<div class="card">✔ Uygun Fiyat Garantisi</div>
+<div class="card">✔ Türkiye Geneli Kargo</div>
+<div class="card">✔ Cihat Hyundai Güvencesi</div>
+</div>
 
-    <!-- Product Modal -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2 id="modalTitle"></h2>
-            </div>
-            <div class="modal-body">
-                <div id="modalDescription"></div>
-                <div style="margin-top:30px;">
-                    <a id="modalWhatsApp" href="#" class="phone-btn" style="display:block; text-align:center; padding:15px; font-size:1.2rem;" target="_blank">💬 WhatsApp'tan Fiyat Al</a>
-                </div>
-            </div>
-        </div>
-    </div>
+</section>
 
-    <script>
-        // Ürün Verileri (LocalStorage'dan yüklenecek)
-        let products = JSON.parse(localStorage.getItem('hyundaiProducts')) || [
-            {
-                id: 1,
-                name: "Hyundai i20 1.4 CRDi Çıkma Motor",
-                price: "18.500 TL",
-                desc: "2018 model Hyundai i20 1.4 CRDi dizel motor. 120.000 km'de. Ekspertiz raporu mevcut. 3 ay garanti.
+<section class="section">
+
+<h2>Çıkma Motor Stokları</h2>
+
+<div class="grid">
+
+<!-- MOTOR 1 -->
+<div class="card">
+<img src="https://via.placeholder.com/400x250" alt="Hyundai Accent Çıkma Motor">
+<h3>Accent 1.5 CRDI Motor</h3>
+<p>2006-2012 uyumlu, test edilmiş motor</p>
+<a class="btn green" href="https://wa.me/905537383806">Fiyat Sor</a>
+</div>
+
+<!-- MOTOR 2 -->
+<div class="card">
+<img src="https://via.placeholder.com/400x250" alt="Hyundai Era Motor">
+<h3>Hyundai Era 1.4 Motor</h3>
+<p>2006-2012 sorunsuz çıkma motor</p>
+<a class="btn green" href="https://wa.me/905537383806">Fiyat Sor</a>
+</div>
+
+<!-- MOTOR 3 -->
+<div class="card">
+<img src="https://via.placeholder.com/400x250" alt="Hyundai Blue Motor">
+<h3>Hyundai Blue 1.6 Motor</h3>
+<p>2012-2017 uyumlu çıkma motor</p>
+<a class="btn green" href="https://wa.me/905537383806">Fiyat Sor</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Hakkımızda</h2>
+<p class="small">
+Cihat Hyundai olarak Ankara merkezli firmamızda Hyundai araçlar için çıkma motor tedariği yapmaktayız.  
+Tüm motorlarımız test edilerek satışa sunulmaktadır.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>İletişim</h2>
+<p>Serhat Mah. 1126. Cad. No: 14 Yenimahalle / Ankara</p>
+<p>0553 738 38 06 | 0534 844 18 61</p>
+
+</section>
+
+<footer>
+© 2026 Cihat Hyundai | Tüm Hakları Saklıdır
+</footer>
+
+<a class="whatsapp" href="https://wa.me/905537383806">W</a>
+
+</body>
+</html>
