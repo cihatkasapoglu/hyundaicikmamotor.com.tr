@@ -1,747 +1,508 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-   <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>HyundaicikMotor.com.tr - Hyundai & Kia Motor Değiştirme ve Servis | 81 Şehirde Uzman Servis</title>
-   <meta name="description" content="HyundaicikMotor.com.tr - Orijinal Hyundai ve Kia motörleri, profesyonel servis, motor değiştirme ve 81 şehirlerde mobil servis. Ankara, İstanbul, İzmir, Bursa, Antalya ve daha fazlası. Telefon ve WhatsApp: 0553 738 38 06 - 0534 844 18 61">
-   <meta name="keywords" content="Hyundai motor, Kia motor, Hyundai i20 motoru, Kia Sportage motoru, Hyundai Elantra motoru, Kia Sorento motoru, motor değiştirme Ankara, motor servisi İstanbul, Hyundai servis Bursa, Kia servis İzmir, motor tamiri Antalya, oto motorları, hybrid motor Hyundai, eco motor Kia, 2024 Hyundai motor, 2026 Kia motor, motor değişimi, motör değiştirme, motor bakım, motor onarım, Hyundai Kia servis ağı, orijinal motor, ikinci el motor, motor satın al, motor fiyatları, motor ilanları, motorduyuruları, motor duyuru, motorduyuru sitesi, sitatık site, motor ilan sitesi, hyundaicikmamotor.com.tr">
-   <meta name="author" content="HyundaicikMotor.com.tr">
-   <meta name="robots" content="index, follow">
-   <meta property="og:title" content="HyundaicikMotor.com.tr - Hyundai & Kia Motor ve Servis">
-   <meta property="og:description" content="81 şehirde profesyonel Hyundai ve Kia motör servisi, motor değiştirme ve blog.">
-   <meta property="og:image" content="https://picsum.photos/seed/hyundaikia/120/630">
-   <meta property="og:url" content="https://hyundaicikmamotor.com.tr">
-   <meta property="og:type" content="website">
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:title" content="HyundaicikMotor.com.tr - Hyundai & Kia Motor ve Servis">
-   <meta name="twitter:description" content="81 şehirde profesyonel Hyundai ve Kia motör servisi, motor değiştirme ve blog.">
-   <meta name="twitter:image" content="https://picsum.photos/seed/hyundaikia/120/630">
-   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/200/svg' viewBox='0 0 64'><text x='8' y='48' font-size='48'>🔧</text></svg>" />
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@70&family=Roboto:wght@40;50;70&display=swap" rel="stylesheet" >
-
-   <style>
-        :root {
-            --primary: #1a5276;
-            --primary-light: #2c3e50;
-            --accent: #27ae60;
-            --danger: #c0392b;
-            --bg: #f9f9f9;
-            --card: #ffff;
-            --text: #333;
-            --muted: #777;
-            --radius: 12px;
-            --shadow: 0 4px 20px rgba(0,0,0,0.08);
-            --container: 140px;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background: var(--bg);
-        }
-
-        a { color: inherit; text-decoration: none; transition: color 0.3s; }
-
-        ul { list-style: none; }
-
-        img { max-width: 100%; display: block; border-radius: var(--radius); }
-
-        .container {
-            max-width: var(--container);
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            text-align: center;
-            margin: 60px 0 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: #fff;
-            box-shadow: 0 4px 15px rgba(26, 82, 118, 0.4);
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-light);
-            transform: scale(1.05);
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .badge-primary {
-            background: #e8f4fd;
-            color: var(--primary);
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: var(--shadow);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 70;
-            letter-spacing: 1px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            font-weight: 500;
-            padding: 8px 0;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #fff;
-            transition: width 0.3s;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            padding: 100px 0 60px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            background: rgba(25, 25, 32, 0.2);
-            padding: 12px 35px;
-            border-radius: 50px;
-            font-weight: 700;
-            margin-bottom: 35px;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-           0%, 100% { transform: translateY(0); }
-           50% { transform: translateY(-10px); }
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 35px;
-        }
-
-        /* Call to Action */
-
-        .cta-section {
-            text-align: center;
-            max-width: 600px;
-            margin: 60px auto 40px;
-        }
-
-        .phone-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: var(--accent);
-            color: #fff;
-            padding: 18px 36px;
-            border-radius: 50px;
-            font-weight: 700;
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-           0%, 100% { transform: scale(1); }
-           50% { transform: scale(1.05); }
-        }
-
-        /* City Map Section */
-
-        .city-map {
-            background: var(--card);
-            border-radius: var(--radius);
-            padding: 30px;
-            margin: 40px auto;
-            box-shadow: var(--shadow);
-        }
-
-        .city-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 15px;
-            max-width: 120px;
-            margin: 0 auto;
-        }
-
-        .city-card {
-            background: #f4f6f8;
-            border-radius: 10px;
-            padding: 18px;
-            transition: transform 0.3s ease;
-        }
-
-        .city-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .city-name {
-            font-weight: 70;
-            color: var(--primary);
-            margin-bottom: 6px;
-        }
-
-        .city-city {
-            font-size: 0.85rem;
-            color: var(--muted);
-        }
-
-        .city-footer {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.75rem;
-            color: var(--muted);
-        }
-
-        /* Motor Catalog Section */
-
-        .motor-catalog {
-            background: var(--card);
-            padding: 60px 0;
-        }
-
-        .filter-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .filter-tab {
-            padding: 10px 24px;
-            background: #eef2f5;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 500;
-            border: none;
-            transition: all 0.3s ease;
-        }
-
-        .filter-tab.active {
-            background: var(--primary);
-            color: #fff;
-            box-shadow: 0 4px 12px rgba(26, 82, 118, 0.4);
-        }
-
-        .motor-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 140px;
-            margin: 0 auto;
-        }
-
-        .motor-card {
-            background: #fff;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .motor-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .motor-thumb {
-            height: 200px;
-            background: #e8ecf1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .motor-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.9);
-        }
-
-        .motor-info {
-            padding: 25px;
-        }
-
-        .motor-model {
-            font-size: 1.4rem;
-            font-weight: 70;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .motor-year {
-            color: var(--muted);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .motor-details {
-            font-size: 0.9rem;
-            color: #444;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .price-badge {
-            background: var(--accent);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-weight: 600;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        /* Blog Section */
-
-        .blog-section {
-            background: var(--card);
-            padding: 60px 0;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            max-width: 140px;
-            margin: 0 auto;
-        }
-
-        .blog-post {
-            background: #fafa;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-thumb {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .blog-thumb img {
-            width: 100%;
-            height: 100%;
-            object-cover;
-        }
-
-        .blog-content {
-            padding: 25px;
-        }
-
-        .blog-title {
-            font-size: 1.3rem;
-            font-weight: 70;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .blog-excerpt {
-            color: var(--muted);
-            margin-bottom: 15px;
-        }
-
-        .blog-meta {
-            font-size: 0.85rem;
-            color: var(--muted);
-            margin-bottom: 15px;
-        }
-
-        /* FAQ Section */
-
-        .faq-section {
-            background: #f4f6f8;
-            padding: 60px 0;
-        }
-
-        .faq-item {
-            background: var(--card);
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .faq-question {
-            padding: 20px 25px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-answer {
-            padding: 0 25px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-
-        .faq-answer.open {
-            max-height: 200px;
-            padding: 0 25px 20px;
-        }
-
-        /* Footer */
-
-        footer {
-            background: var(--primary-light);
-            color: #fff;
-            padding: 50px 0 30px;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #000;
-        }
-
-        .footer-column ul li {
-            list-style: none;
-        }
-
-        .footer-column a:hover {
-            color: var(--accent);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* Responsive Design */
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .motor-list { grid-template-columns: 1fr; }
-            .blog-grid { grid-template-columns: 1fr; }
-        }
-   </style>
-</head>
-<body>
-
-<header>
-   <div class="container nav-container">
-       <a href="#" class="logo">HyundaicikMotor.com.tr</a>
-       <nav class="nav-links">
-           <a href="#home">Anasayfa</a>
-           <a href="#motors">Motorlar</a>
-           <a href="#cities">Şehirler</a>
-           <a href="#blog">Blog
-</a>
-           <a href="#contact">İletişim</a>
-       </nav>
-   </div>
-</header>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="hero-content">
-        <div class="hero-badge">81 Şehirde Profesyonel Mobil Servis</div>
-        <h1>Orijinal Hyundai ve Kia Motorları</h1>
-        <p>Garantili çıkma, sıfır ve revizyonlu motor satışı ile uzman montaj hizmetleri. Ankara merkezli tüm Türkiye'ye hızlı teslimat ve yerinde montaj.</p>
-        <div class="cta-section">
-            <a href="tel:05537383806" class="phone-whatsapp">Hemen Ara: 0553 738 38 06</a>
-        </div>
-    </div>
-</section>
-
-<!-- Motor Catalog Section -->
-<section id="motors" class="motor-catalog">
-    <div class="container">
-        <h2 class="section-title">Motor Kataloğumuz</h2>
-        <div class="filter-tabs">
-            <button class="filter-tab active">Tüm Motorlar</button>
-            <button class="filter-tab">Hyundai Motorları</button>
-            <button class="filter-tab">Kia Motorları</button>
-        </div>
-        <div class="motor-list">
-            <!-- Motor Card 1 -->
-            <div class="motor-card">
-                <div class="motor-thumb">
-                    <img src="https://picsum.photos/seed/motor1/350/200" alt="Hyundai i20 Motoru">
-                </div>
-                <div class="motor-info">
-                    <div class="badge badge-primary">Stokta Var</div>
-                    <h3 class="motor-model">Hyundai i20 Motor</h3>
-                    <p class="motor-year">Uyumlu Yıllar: 2014 - 2024</p>
-                    <p class="motor-details">1.4 MPI Orijinal çıkma motor. Tüm testleri yapılmış, tak-çalıştır garantili.</p>
-                </div>
-            </div>
-            <!-- Motor Card 2 -->
-            <div class="motor-card">
-                <div class="motor-thumb">
-                    <img src="https://picsum.photos/seed/motor2/350/200" alt="Kia Sportage Motoru">
-                </div>
-                <div class="motor-info">
-                    <div class="badge badge-primary">Garantili</div>
-                    <h3 class="motor-model">Kia Sportage Motor</h3>
-                    <p class="motor-year">Uyumlu Yıllar: 2016 - 2026</p>
-                    <p class="motor-details">1.6 GDI Revizyonlu motor. Uzman kadromuz tarafından yenilenmiş ve teste tabi tutulmuştur.</p>
-                </div>
-            </div>
-            <!-- Motor Card 3 -->
-            <div class="motor-card">
-                <div class="motor-thumb">
-                    <img src="https://picsum.photos/seed/motor3/350/200" alt="Hyundai Elantra Motoru">
-                </div>
-                <div class="motor-info">
-                    <div class="badge badge-primary">Sıfır Ayarında</div>
-                    <h3 class="motor-model">Hyundai Elantra Motor</h3>
-                    <p class="motor-year">Uyumlu Yıllar: 2018 - 2024</p>
-                    <p class="motor-details">1.6 MPI düşük kilometreli çıkma motor. Tüm Türkiye'ye aynı gün kargo.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- City Map Section -->
-<section id="cities" class="container">
-    <h2 class="section-title">Hizmet Ağımız</h2>
-    <div class="city-map">
-        <p style="text-align:center; margin-bottom:30px; color:var(--muted);">Ankara merkezli olarak 81 şehre kargo ve mobil servis hizmeti sunuyoruz.</p>
-        <div class="city-list">
-            <div class="city-card">
-                <h4 class="city-name">Ankara</h4>
-                <p class="city-city">Merkez Servis ve Montaj</p>
-            </div>
-            <div class="city-card">
-                <h4 class="city-name">İstanbul</h4>
-                <p class="city-city">Mobil Servis</p>
-            </div>
-            <div class="city-card">
-                <h4 class="city-name">İzmir</h4>
-                <p class="city-city">Hızlı Teslimat</p>
-            </div>
-            <div class="city-card">
-                <h4 class="city-name">Bursa</h4>
-                <p class="city-city">Mobil Servis</p>
-            </div>
-            <div class="city-card">
-                <h4 class="city-name">Antalya</h4>
-                <p class="city-city">Anlaşmalı Servis</p>
-            </div>
-            <div class="city-card">
-                <h4 class="city-name">Tüm Türkiye</h4>
-                <p class="city-city">Kargo ve Dağıtım</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Blog Section -->
-<section id="blog" class="blog-section">
-    <div class="container">
-        <h2 class="section-title">Sektörel Haberler & Bilgiler</h2>
-        <div class="blog-grid">
-            <div class="blog-post">
-                <div class="blog-thumb">
-                    <img src="https://picsum.photos/seed/blog1/400/250" alt="Motor Değişimi">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">12 Ekim 2026 | Teknik Servis</div>
-                    <h3 class="blog-title">Oto Motor Değişiminde Dikkat Edilmesi Gerekenler</h3>
-                    <p class="blog-excerpt">Çıkma motor alırken nelere dikkat etmelisiniz? Kilometre doğrulaması ve kompresyon testlerinin önemi hakkında detaylar...</p>
-                </div>
-            </div>
-            <div class="blog-post">
-                <div class="blog-thumb">
-                    <img src="https://picsum.photos/seed/blog2/400/250" alt="Hybrid Motor Bakımı">
-                </div>
-                <div class="blog-content">
-                    <div class="blog-meta">5 Ekim 2026 | Hyundai & Kia</div>
-                    <h3 class="blog-title">Yeni Nesil Hybrid Motorların Uzun Ömür Sırları</h3>
-                    <p class="blog-excerpt">2024 ve sonrası üretilen Hyundai ve Kia eco motorların bakımı nasıl yapılmalı? Yanlış bilinen doğrular.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="faq-section">
-    <div class="container" style="max-width: 800px;">
-        <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+    <title>Cihat Hyundai | Hyundai ve KIA Motor Merkezi</title>
+    
+    <meta name="description" content="Ankara merkezli depomuzdan Türkiye'nin tüm illerine garantili ve test edilmiş Hyundai ve KIA çıkma motor, sıfır sandık motor, yarım motor ve silindir kapağı gönderimi.">
+    <meta name="keywords" content="hyundai çıkma motor, KIA çıkma motor, hyundai sandık motor, KIA sandık motor, ankara çıkma motor, motor bloğu, silindir kapağı, hyundai accent era motor, hyundai i20 motor, hyundai tucson motor, KIA sportage motor, KIA ceed motor, KIA sorento motor, yarım motor, komple motor, boş motor, dolu motor">
+    <meta name="author" content="Nokta Sosyal Medya">
+    
+    <!-- Modern Fontlar ve İkonlar -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS (Profesyonel UI için) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoPartsStore",
+      "name": "Cihat Hyundai",
+      "url": "https://hyundaicikmamotor.com.tr",
+      "logo": "https://hyundaicikmamotor.com.tr/logo.png",
+      "description": "Hyundai ve KIA markaları için motor, motor bloğu, dolu ve boş motor satış merkezi.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Serhat Mah. 1126. Cad. No: 14 Yenimahalle",
+        "addressLocality": "Ankara",
+        "addressCountry": "TR"
+      },
+      "telephone": "+90 553 738 38 06"
+    }
+    </script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
         
-        <div class="faq-item">
-            <div class="faq-question">
-                <strong>Motorlarınıza garanti veriyor musunuz?</strong>
-                <span>+</span>
-            </div>
-            <div class="faq-answer">
-                <p style="padding-top:15px;">Evet, sattığımız tüm sıfır, revizyonlu ve çıkma motorlar çalışma garantilidir. Merkez servisimizde yapılan montajlarda ekstra hizmet garantisi sunmaktayız.</p>
-            </div>
-        </div>
+        /* Kurumsal Renk Paleti */
+        .color-hyundai { color: #002c5f; }
+        .bg-hyundai { background-color: #002c5f; }
+        .hover-bg-hyundai:hover { background-color: #001f44; }
+        
+        .color-kia { color: #bb162b; }
+        .bg-kia { background-color: #bb162b; }
+        .hover-bg-kia:hover { background-color: #901020; }
+        
+        .bg-dark { background-color: #111827; }
+        
+        /* Modern Efektler ve Gölgeler */
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        
+        /* Buton Tasarımları */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.5rem; font-weight: 600; border-radius: 0.375rem; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.875rem; }
+        .btn-outline { border: 2px solid #002c5f; color: #002c5f; background: transparent; }
+        .btn-outline:hover { background: #002c5f; color: #ffffff; }
+        
+        /* SSS Akordeon Stili */
+        details { transition: all 0.3s ease; }
+        summary { list-style: none; cursor: pointer; }
+        summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .5s ease-in-out; }
+        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
+        
+        /* Yüzen Butonlar (Floating Action Buttons) */
+        .fab-container { position: fixed; bottom: 30px; right: 30px; z-index: 999; display: flex; flex-direction: column; gap: 15px; }
+        .fab { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: transform 0.3s; }
+        .fab:hover { transform: scale(1.1); }
+        .fab-whatsapp { background-color: #25D366; }
+        .fab-phone { background-color: #002c5f; }
+        
+        .seo-hidden { height: 1px; width: 1px; overflow: hidden; position: absolute; top: -9999px; }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
 
-        <div class="faq-item">
-            <div class="faq-question">
-                <strong>Ankara dışında yaşıyorum, montaj yaptırabilir miyim?</strong>
-                <span>+</span>
+    <!-- Yüzen Hızlı İletişim Butonları -->
+    <div class="fab-container">
+        <a href="https://wa.me/905537383806" class="fab fab-whatsapp" aria-label="WhatsApp Destek">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:05348441861" class="fab fab-phone" aria-label="Hemen Ara">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <!-- Üst Bilgi Barı -->
+    <div class="bg-dark text-gray-300 text-xs py-2 hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-map-marker-alt mr-2"></i> Serhat Mah. Yenimahalle / Ankara</span>
+                <span><i class="fas fa-truck mr-2"></i> Türkiye'nin Her Yerine Gönderim</span>
             </div>
-            <div class="faq-answer">
-                <p style="padding-top:15px;">Türkiye'nin 81 iline motor gönderimi yapıyoruz. Belirli illerde mobil servisimiz veya anlaşmalı olduğumuz profesyonel servis noktaları üzerinden montaj desteği sağlıyoruz.</p>
+            <div class="flex space-x-6">
+                <span><i class="fas fa-phone mr-2"></i> 0553 738 38 06</span>
+                <span><i class="fas fa-phone mr-2"></i> 0534 844 18 61</span>
             </div>
         </div>
     </div>
-</section>
 
-<!-- Footer -->
-<footer id="contact">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>HyundaicikMotor.com.tr</h3>
-                <p>Türkiye'nin en güvenilir Hyundai ve Kia motor tedarik ve servis ağı. Yılların tecrübesiyle aracınıza hayat veriyoruz.</p>
+    <!-- Modern Navigasyon -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+            <div class="text-3xl font-black color-hyundai tracking-tighter uppercase flex items-center gap-2">
+                <i class="fas fa-cogs"></i>
+                <a href="#">Cihat Hyundai</a>
             </div>
-            <div class="footer-column">
-                <h3>İletişim Bilgileri</h3>
-                <ul>
-                    <li style="margin-bottom: 10px;">Telefon 1: 0553 738 38 06</li>
-                    <li style="margin-bottom: 10px;">Telefon 2: 0534 844 18 61</li>
-                    <li style="margin-bottom: 10px;">Adres: Serhat Mah. 1126. Cad. No: 14 Yenimahalle/Ankara</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Hızlı Menü</h3>
-                <ul>
-                    <li style="margin-bottom: 10px;"><a href="#home">Anasayfa</a></li>
-                    <li style="margin-bottom: 10px;"><a href="#motors">Motor İlanları</a></li>
-                    <li style="margin-bottom: 10px;"><a href="#blog">Blog & Duyurular</a></li>
-                </ul>
+            <nav class="hidden lg:flex space-x-8 font-semibold text-gray-600">
+                <a href="#kurumsal" class="hover:text-blue-900 transition border-b-2 border-transparent hover:border-blue-900 pb-1">Kurumsal</a>
+                <a href="#hizmetler" class="hover:text-blue-900 transition border-b-2 border-transparent hover:border-blue-900 pb-1">Hizmetlerimiz</a>
+                <a href="#katalog" class="hover:text-blue-900 transition border-b-2 border-transparent hover:border-blue-900 pb-1">Motor Kataloğu</a>
+                <a href="#sss" class="hover:text-blue-900 transition border-b-2 border-transparent hover:border-blue-900 pb-1">Sıkça Sorulan Sorular</a>
+                <a href="#iletisim" class="hover:text-blue-900 transition border-b-2 border-transparent hover:border-blue-900 pb-1">İletişim</a>
+            </nav>
+            <div class="flex space-x-3 mt-4 lg:mt-0 w-full lg:w-auto">
+                <a href="tel:05348441861" class="btn bg-hyundai text-white hover-bg-hyundai flex-1 lg:flex-none">
+                    <i class="fas fa-phone-alt mr-2"></i> Stok Sor
+                </a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 HyundaicikMotor.com.tr - Tüm Hakları Saklıdır.</p>
-        </div>
-    </div>
-</footer>
+    </header>
 
-<script>
-    // FAQ Toggle Script
-    const faqQuestions = document.querySelectorAll('.faq-question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            const icon = question.querySelector('span');
+    <!-- Profesyonel Hero Section -->
+    <section class="relative bg-dark text-white py-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <span class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">Sadece Motor ve Motor Parçaları</span>
+            <h1 class="text-4xl md:text-7xl font-black mb-6 leading-tight">Hyundai ve KIA<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">Motor Merkezi</span></h1>
+            <p class="text-lg md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">Ankara merkez depomuzdan garantili sıfır sandık motor, çıkma motor ve silindir kapağı tedariği. Test edilmiş motor grupları için profesyonel çözüm ortağınız.</p>
             
-            if(answer.classList.contains('open')) {
-                answer.classList.remove('open');
-                icon.textContent = '+';
-            } else {
-                // Close all others
-                document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-                document.querySelectorAll('.faq-question span').forEach(i => i.textContent = '+');
-                
-                // Open current
-                answer.classList.add('open');
-                icon.textContent = '-';
-            }
-        });
-    });
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#katalog" class="btn bg-white text-gray-900 w-full sm:w-auto hover:bg-gray-200">
+                    <i class="fas fa-search mr-2"></i> Motorları İncele
+                </a>
+                <a href="#iletisim" class="btn btn-outline border-white text-white hover:bg-white w-full sm:w-auto hover:text-gray-900">
+                    <i class="fas fa-map-marker-alt mr-2"></i> İletişim & Adres
+                </a>
+            </div>
+        </div>
+    </section>
 
-    // Filter Tabs Script (Visual only for static demo)
-    const tabs = document.querySelectorAll('.filter-tab');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-        });
-    });
-</script>
+    <!-- Kurumsal Bilgi & Avantajlar -->
+    <section id="kurumsal" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-black color-hyundai mb-4 uppercase">Profesyonel Tedarik Süreci</h2>
+                <p class="text-gray-600 text-lg">Yalnızca Hyundai ve KIA motor grupları üzerine yoğunlaşan yapımızla, ihtiyacınız olan motor bloğunu veya silindir kapağını testlerden geçirerek tarafınıza sevk ediyoruz.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Kutu 1 -->
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-100 card-hover">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-900 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Test Edilmiş Üniteler</h3>
+                    <p class="text-gray-600 text-sm">Tüm çıkma motor ve motor blokları kompresyon ve yüzey çatlak testlerinden geçirilerek stoklarımıza eklenir.</p>
+                </div>
+                <!-- Kutu 2 -->
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-100 card-hover">
+                    <div class="w-16 h-16 mx-auto bg-red-100 text-red-900 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sıfır Sandık Motor</h3>
+                    <p class="text-gray-600 text-sm">Montaja hazır, özel paketli sıfır sandık motor seçeneklerimizle aracınızın performansını yeniliyoruz.</p>
+                </div>
+                <!-- Kutu 3 -->
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-100 card-hover">
+                    <div class="w-16 h-16 mx-auto bg-blue-100 text-blue-900 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hızlı Sevkiyat</h3>
+                    <p class="text-gray-600 text-sm">Ankara'daki merkez depomuzdan Türkiye'nin her noktasına güvenli ve hızlı motor gönderimi sağlıyoruz.</p>
+                </div>
+                <!-- Kutu 4 -->
+                <div class="text-center p-6 bg-gray-50 rounded-xl border border-gray-100 card-hover">
+                    <div class="w-16 h-16 mx-auto bg-red-100 text-red-900 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sadece Motor Grubu</h3>
+                    <p class="text-gray-600 text-sm">Komple motor, yarım motor ve silindir kapağı haricinde farklı aksam satışı yapmıyor, uzmanlığımızı koruyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kapsamlı Motor Kataloğu -->
+    <section id="katalog" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-gray-300 pb-6">
+                <div>
+                    <span class="text-blue-600 font-bold uppercase text-sm tracking-wider">Stok Listesi</span>
+                    <h2 class="text-3xl md:text-5xl font-black text-gray-900 mt-2">Motor Kataloğu</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="tel:05348441861" class="btn bg-dark text-white hover:bg-gray-800">Tüm Stok İçin Arayın</a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                
+                <!-- Hyundai Accent Serisi -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-blue-900">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded">Hyundai</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">hyundai accent era 1.5 crdi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">ankara merkezimizden test edilmiş, garantili komple veya yarım dizel motor bloğu.</p>
+                        <a href="tel:05537383806" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-blue-900">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded">Hyundai</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">hyundai accent blue 1.6 crdi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">garantili ve kontrolleri sağlanmış hyundai accent blue motor bloğu ve silindir kapağı.</p>
+                        <a href="tel:05348441861" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-blue-900">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded">Hyundai</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-box text-blue-500"></i> Sıfır</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">hyundai accent era 1.4 mpi sandık motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">montaja hazır, paketli sıfır sandık benzinli motor ünitesi. stok sorgulaması yapınız.</p>
+                        <a href="https://wa.me/905537383806" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fab fa-whatsapp text-green-500 mr-2"></i> WhatsApp'tan Sor</a>
+                    </div>
+                </div>
+
+                <!-- Hyundai i Serisi -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-blue-900">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded">Hyundai</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">hyundai i20 1.4 mpi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">hyundai i20 benzinli araçlar için testleri yapılmış dolu veya boş motor seçenekleri.</p>
+                        <a href="tel:05348441861" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-blue-900">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded">Hyundai</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">hyundai i30 1.6 crdi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">hyundai i30 serisi için garantili yarım motor ve silindir kapağı grubu.</p>
+                        <a href="tel:05537383806" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <!-- Hyundai SUV & Ticari -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-blue-900">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded">Hyundai</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-box text-blue-500"></i> Sıfır</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">hyundai tucson 1.6 t-gdi sandık motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">yeni nesil tucson için paketli sıfır sandık motor. garantili sevkiyat sağlanır.</p>
+                        <a href="https://wa.me/905537383806" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fab fa-whatsapp text-green-500 mr-2"></i> WhatsApp'tan Sor</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-blue-900">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded">Hyundai</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">hyundai h100 2.5 d çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">ticari araçlar için basınca dayanıklı test edilmiş h100 dizel motor bloğu.</p>
+                        <a href="tel:05348441861" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <!-- KIA Serisi -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-red-700">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-bold px-3 py-1 rounded">KIA</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">KIA sportage 1.6 gdi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">sportage gdi serisi için sorunsuz çalışan garantili çıkma motor ünitesi.</p>
+                        <a href="tel:05537383806" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-red-700">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-bold px-3 py-1 rounded">KIA</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">KIA ceed 1.6 crdi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">dizel KIA ceed için temiz, çatlak testi yapılmış yarım motor veya komple motor.</p>
+                        <a href="tel:05348441861" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-red-700">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-bold px-3 py-1 rounded">KIA</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">KIA sorento 2.5 crdi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">güçlü sorento motorları için detaylı ekspertizi yapılmış dizel motor bloğu.</p>
+                        <a href="tel:05537383806" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-red-700">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-bold px-3 py-1 rounded">KIA</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-box text-blue-500"></i> Sıfır</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">KIA bongo 2.5 tci sandık motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">ticari KIA bongo için sandık motor seçeneklerimiz merkezimizde mevcuttur.</p>
+                        <a href="https://wa.me/905537383806" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fab fa-whatsapp text-green-500 mr-2"></i> WhatsApp'tan Sor</a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover border-t-4 border-red-700">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="bg-red-100 text-red-800 text-xs font-bold px-3 py-1 rounded">KIA</span>
+                            <span class="text-gray-400 text-sm"><i class="fas fa-check-circle text-green-500"></i> Stokta</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 lowercase">KIA rio 1.4 mpi çıkma motor</h3>
+                        <p class="text-sm text-gray-500 mb-6 lowercase">benzinli KIA rio araçlarına tam uyumlu, testleri tamamlanmış yarım motor ünitesi.</p>
+                        <a href="tel:05348441861" class="block text-center bg-gray-100 text-gray-800 font-bold py-3 rounded hover:bg-gray-200 transition"><i class="fas fa-tag mr-2"></i> Fiyat Alın</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-6">Listede bulunmayan diğer tüm Hyundai (Elantra, Getz, Starex vb.) ve KIA (Cerato, Stonic, Picanto vb.) motor blokları, silindir kapakları ve yedek parça stokları için bizimle doğrudan iletişime geçiniz.</p>
+                <a href="tel:05537383806" class="btn bg-dark text-white hover:bg-gray-800 px-8 py-4"><i class="fas fa-phone-volume mr-3"></i> 0553 738 38 06 Numaralı Hattı Arayın</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SSS (Sıkça Sorulan Sorular) Bölümü -->
+    <section id="sss" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <span class="text-red-600 font-bold uppercase text-sm tracking-wider">Bilgilendirme</span>
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 mt-2">Sıkça Sorulan Sorular</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Soru 1 -->
+                <details class="bg-gray-50 border border-gray-200 rounded-lg group" open>
+                    <summary class="flex justify-between items-center font-bold text-lg p-6 text-gray-800">
+                        Motorların test süreçleri nasıl ilerliyor?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 border-t border-gray-200 pt-4 mt-2">
+                        Merkezimize gelen tüm motor blokları, silindir kapakları ve yarım motorlar alanında uzman ekibimiz tarafından çatlak ve kompresyon testlerine tabi tutulmaktadır. Sadece testten başarıyla geçen sorunsuz üniteler satışa sunulur.
+                    </div>
+                </details>
+
+                <!-- Soru 2 -->
+                <details class="bg-gray-50 border border-gray-200 rounded-lg group">
+                    <summary class="flex justify-between items-center font-bold text-lg p-6 text-gray-800">
+                        Sandık motor ile çıkma motor arasındaki fark nedir?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 border-t border-gray-200 pt-4 mt-2">
+                        Sıfır sandık motor, üretimden yeni çıkmış, daha önce kullanılmamış ve paketi açılmamış montaja hazır ünitedir. Çıkma motor ise kullanılmış ancak tarafımızca gerekli testleri yapılarak kusursuzluğu onaylanmış ikinci el sağlam motor ünitesidir.
+                    </div>
+                </details>
+
+                <!-- Soru 3 -->
+                <details class="bg-gray-50 border border-gray-200 rounded-lg group">
+                    <summary class="flex justify-between items-center font-bold text-lg p-6 text-gray-800">
+                        Hangi bölgelere kargo gönderiminiz bulunuyor?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 border-t border-gray-200 pt-4 mt-2">
+                        Ankara merkez depomuzdan Türkiye'nin 81 iline anlaşmalı kargo firmalarımız aracılığıyla güvenli, korunaklı ambalajlarda motor ve parça gönderimi sağlamaktayız.
+                    </div>
+                </details>
+
+                <!-- Soru 4 -->
+                <details class="bg-gray-50 border border-gray-200 rounded-lg group">
+                    <summary class="flex justify-between items-center font-bold text-lg p-6 text-gray-800">
+                        Farklı marka araçlar için motor satıyor musunuz?
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-gray-600 border-t border-gray-200 pt-4 mt-2">
+                        Hayır. Yalnızca Hyundai ve KIA markalarına ait motor, yarım motor ve silindir kapakları üzerine uzmanlaşmış durumdayız. Bu sayede her iki marka için en geniş stok ve en doğru teknik bilgiyi sunabiliyoruz.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim ve Adres -->
+    <section id="iletisim" class="py-24 bg-dark text-white relative">
+        <div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(circle at center, #ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4 uppercase tracking-wide">İletişime Geçin</h2>
+                <p class="text-xl text-gray-400 font-light">Ankara'daki merkez depomuzdan bilgi almak, stok sorgulamak veya sipariş vermek için bizi arayın.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Telefon 1 -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center card-hover flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-300 mb-2 uppercase">Satış & Bilgi</h3>
+                    <a href="tel:05537383806" class="text-3xl font-black text-white hover:text-blue-400 transition mb-4 block">0553 738 38 06</a>
+                    <a href="https://wa.me/905537383806" class="btn bg-green-600 text-white hover:bg-green-700 w-full mt-auto">
+                        <i class="fab fa-whatsapp mr-2"></i> WhatsApp
+                    </a>
+                </div>
+                
+                <!-- Telefon 2 -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center card-hover flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-red-900 text-white rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-300 mb-2 uppercase">Stok Sorgulama</h3>
+                    <a href="tel:05348441861" class="text-3xl font-black text-white hover:text-red-400 transition mb-4 block">0534 844 18 61</a>
+                    <a href="tel:05348441861" class="btn bg-hyundai text-white hover-bg-hyundai w-full mt-auto">
+                        <i class="fas fa-phone-alt mr-2"></i> Hemen Ara
+                    </a>
+                </div>
+
+                <!-- Adres -->
+                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center card-hover flex flex-col items-center justify-center">
+                    <div class="w-16 h-16 bg-gray-700 text-white rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-300 mb-4 uppercase">Merkez Adresimiz</h3>
+                    <address class="not-italic text-gray-300 text-lg leading-relaxed font-semibold">
+                        Serhat Mah. 1126. Cad.<br>
+                        No: 14<br>
+                        Yenimahalle / Ankara
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kapsamlı Footer (SEO Botları İçin İl Linkleri Dahil) -->
+    <footer class="bg-black text-gray-500 pt-16 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider">Cihat Hyundai</h4>
+                    <p class="text-sm leading-relaxed mb-4">Sadece Hyundai ve KIA motor, silindir kapağı ve blok tedariği sağlayan Ankara merkezli profesyonel çözüm ortağınız.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider">Hızlı Menü</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#kurumsal" class="hover:text-white transition"><i class="fas fa-angle-right mr-2"></i> Kurumsal Sürecimiz</a></li>
+                        <li><a href="#katalog" class="hover:text-white transition"><i class="fas fa-angle-right mr-2"></i> Motor Stok Listesi</a></li>
+                        <li><a href="#sss" class="hover:text-white transition"><i class="fas fa-angle-right mr-2"></i> Sıkça Sorulan Sorular</a></li>
+                        <li><a href="#iletisim" class="hover:text-white transition"><i class="fas fa-angle-right mr-2"></i> İletişim Bilgileri</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider">Türkiye Geneli Hizmet</h4>
+                    <p class="text-sm leading-relaxed mb-4">Ankara merkezimizden tüm illere garantili sevkiyat sağlanmaktadır. Bulunduğunuz ilden sipariş vermek için çağrı merkezimizi arayabilirsiniz.</p>
+                    <div class="flex flex-wrap gap-2 text-xs">
+                        <span class="bg-gray-900 px-2 py-1 rounded">istanbul hyundai motor</span>
+                        <span class="bg-gray-900 px-2 py-1 rounded">istanbul KIA motor</span>
+                        <span class="bg-gray-900 px-2 py-1 rounded">izmir hyundai motor</span>
+                        <span class="bg-gray-900 px-2 py-1 rounded">izmir KIA motor</span>
+                        <span class="bg-gray-900 px-2 py-1 rounded">bursa hyundai motor</span>
+                        <span class="bg-gray-900 px-2 py-1 rounded">antalya KIA motor</span>
+                        <span class="bg-gray-900 px-2 py-1 rounded">adana hyundai motor</span>
+                        <span class="bg-gray-900 px-2 py-1 rounded">konya KIA motor</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p class="mb-4 md:mb-0 font-bold">&copy; 2026 Cihat Hyundai. Tüm Hakları Saklıdır.</p>
+                <p>Altyapı & Kodlama: Nokta Sosyal Medya</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
