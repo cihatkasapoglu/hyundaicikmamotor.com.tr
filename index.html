@@ -5,13 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cihat hyundai | hyundai ve KIA motor merkezi</title>
     
-    <meta name="description" content="ankara yenimahalle merkezli depomuzdan türkiye'nin tüm illerine test edilmiş hyundai ve KIA çıkma motor, sıfır sandık motor, yarım motor ve silindir kapağı.">
-    <meta name="keywords" content="hyundai çıkma motor, KIA çıkma motor, hyundai sandık motor, KIA sandık motor, ankara çıkma motor, motor bloğu, silindir kapağı, yarım motor, komple motor, boş motor, dolu motor">
+    <meta name="description" content="ankara ostim merkezli depomuzdan türkiye'nin tüm illerine test edilmiş hyundai ve KIA çıkma motor, sıfır sandık motor, yarım motor ve silindir kapağı.">
+    <meta name="keywords" content="hyundai çıkma motor, KIA çıkma motor, hyundai sandık motor, KIA sandık motor, ankara çıkma motor, motor bloğu, silindir kapağı, d4fb motor, g4fa motor, d4cb motor, d4ea motor, d4fa motor">
     
-    <!-- En Stabil İkon Kütüphanesi (Simgelerin %100 Çalıştığı Versiyon) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <!-- Tailwind CSS (Konfigürasyonlu) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -36,13 +32,13 @@
     </script>
     
     <style>
-        /* Zorunlu Yazı Tipi - Tüm Bileşenler İçin */
+        /* Kesin Kural: Tüm Site Arial Olacak */
         * { font-family: Arial, Helvetica, sans-serif !important; }
         
         body { background-color: #f8fafc; color: #1e293b; transition: background-color 0.3s, color 0.3s; overflow-x: hidden; }
         .dark body { background-color: #0f172a; color: #f8fafc; }
         
-        /* Gelişmiş Glassmorphism Mimari */
+        /* Glassmorphism Menü */
         .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0,0,0,0.05); }
         .dark .glass-nav { background: rgba(15, 23, 42, 0.85); border-bottom: 1px solid rgba(255,255,255,0.05); }
         
@@ -51,58 +47,55 @@
         .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
         .dark .product-card:hover { box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5); }
 
-        /* Kendi Yazdığımız Animasyon Sınıfları */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Arama Kutusu Mimari Tasarımı */
         .search-wrapper input { width: 100%; padding: 1.25rem 1.25rem 1.25rem 3.5rem; border-radius: 9999px; outline: none; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 2px solid transparent; transition: all 0.3s; }
         .dark .search-wrapper input { background: #1e293b; color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
         .search-wrapper input:focus { border-color: #002c5f; box-shadow: 0 15px 35px rgba(0, 44, 95, 0.15); }
         .dark .search-wrapper input:focus { border-color: #3b82f6; }
 
-        /* Şehir Etiketleri */
-        .city-tag { display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.75rem; font-weight: bold; border: 1px solid #e2e8f0; margin: 0.25rem; transition: all 0.2s; cursor: default; }
+        .city-tag { display: inline-block; padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.75rem; font-weight: bold; border: 1px solid #e2e8f0; margin: 0.25rem; transition: all 0.2s; cursor: default; text-transform: lowercase; }
         .dark .city-tag { border-color: #334155; color: #cbd5e1; }
         .city-tag:hover { background-color: #002c5f; color: white; border-color: #002c5f; }
 
-        /* Floating Action Buttons (FAB) */
         .fab-container { position: fixed; bottom: 2rem; right: 2rem; z-index: 99; display: flex; flex-direction: column; gap: 1rem; }
-        .fab-btn { width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.5rem; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); transition: transform 0.3s; }
+        .fab-btn { width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); transition: transform 0.3s; }
         .fab-btn:hover { transform: scale(1.1); }
         
-        /* Preloader */
         #loader-screen { position: fixed; inset: 0; background: #0f172a; z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s; }
         .spinner { width: 40px; height: 40px; border: 3px solid rgba(255,255,255,0.1); border-radius: 50%; border-top-color: #3b82f6; animation: spin 1s ease-in-out infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
+
+        .svg-icon { width: 1.25rem; height: 1.25rem; fill: currentColor; }
+        .svg-logo { object-fit: contain; }
     </style>
 </head>
 <body>
 
-    <!-- Yükleme Ekranı -->
     <div id="loader-screen">
         <div class="spinner"></div>
     </div>
 
-    <!-- Sabit İletişim Butonları -->
     <div class="fab-container">
         <a href="https://wa.me/905537383806" class="fab-btn bg-green-500 hover:bg-green-400">
-            <i class="fab fa-whatsapp"></i>
+            <svg viewBox="0 0 24 24" class="w-8 h-8" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         </a>
         <a href="tel:05348441861" class="fab-btn bg-brand-hyundai hover:bg-blue-800">
-            <i class="fas fa-phone-alt"></i>
+            <svg viewBox="0 0 24 24" class="w-6 h-6" fill="currentColor"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.73 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
         </a>
     </div>
 
-    <!-- Reaktif Navigasyon -->
     <nav class="glass-nav fixed w-full top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-brand-hyundai dark:text-white flex items-center gap-3">
-                <i class="fas fa-microchip text-xl"></i>
-                <a href="#">cihat hyundai</a>
+            
+            <div class="flex items-center gap-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg" alt="hyundai logo" class="h-6 svg-logo dark:invert">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Kia_Motors_2021_logo.svg" alt="kia logo" class="h-4 svg-logo dark:invert">
+                <a href="#" class="text-xl font-bold text-brand-hyundai dark:text-white lowercase ml-2">cihat motor merkezi</a>
             </div>
             
-            <div class="hidden lg:flex space-x-8 text-sm font-bold text-gray-600 dark:text-gray-300">
+            <div class="hidden lg:flex space-x-8 text-sm font-bold text-gray-600 dark:text-gray-300 lowercase">
                 <a href="#katalog" class="hover:text-brand-hyundai dark:hover:text-blue-400 transition">stok listesi</a>
                 <a href="#surec" class="hover:text-brand-hyundai dark:hover:text-blue-400 transition">işleyiş süreci</a>
                 <a href="#blog" class="hover:text-brand-hyundai dark:hover:text-blue-400 transition">motor rehberi</a>
@@ -111,18 +104,22 @@
             </div>
             
             <div class="flex items-center gap-4">
-                <button id="theme-switcher" class="text-xl text-gray-500 dark:text-gray-300 hover:text-brand-hyundai transition">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                <button id="theme-switcher" class="text-gray-500 dark:text-gray-300 hover:text-brand-hyundai transition focus:outline-none">
+                    <svg class="w-6 h-6 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg class="w-6 h-6 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 2.32a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.415l-.707-.707a1 1 0 010-1.415zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-2.32 4.22a1 1 0 010 1.415l-.707.707a1 1 0 01-1.415-1.414l.707-.707a1 1 0 011.415 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-2.32a1 1 0 01-1.415 0l-.707-.707a1 1 0 011.414-1.415l.707.707a1 1 0 010 1.415zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm2.32-4.22a1 1 0 010-1.415l.707-.707a1 1 0 011.415 1.414l-.707.707a1 1 0 01-1.415 0zM10 6a4 4 0 100 8 4 4 0 000-8z" clip-rule="evenodd"></path>
+                    </svg>
                 </button>
-                <a href="tel:05537383806" class="hidden md:flex items-center px-6 py-2 bg-brand-hyundai text-white rounded-full font-bold text-xs hover:bg-blue-900 transition">
+                <a href="tel:05537383806" class="hidden md:flex items-center gap-2 px-6 py-2 bg-brand-hyundai text-white rounded-full font-bold text-xs hover:bg-blue-900 transition lowercase">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.73 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
                     hızlı fiyat al
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Parallax Arama & Hero Alanı -->
     <header class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-brand-dark">
         <div class="absolute inset-0 z-0 opacity-20">
             <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1920&q=80" alt="merkez depo" class="w-full h-full object-cover">
@@ -130,141 +127,146 @@
         <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent z-10"></div>
         
         <div class="container mx-auto px-6 relative z-20 text-center reveal">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight">
-                hyundai & KIA <br>
+            <div class="flex justify-center items-center gap-6 mb-8 opacity-90">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg" alt="hyundai" class="h-12 invert drop-shadow-lg">
+                <div class="w-px h-10 bg-white/30"></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Kia_Motors_2021_logo.svg" alt="kia" class="h-8 invert drop-shadow-lg">
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white tracking-tight lowercase">
+                komple ve yarım <br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">merkez motor deposu</span>
             </h1>
-            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-normal">
-                ankara yenimahalle adresimizden test edilmiş çıkma motor, garantili sıfır sandık motor, yarım motor ve silindir kapağı tedariği.
+            <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto font-normal lowercase">
+                ankara ostim adresimizden test edilmiş çıkma motor, sıfır sandık motor ve silindir kapağı tedariği.
             </p>
             
-            <!-- Durum Yönetimli Canlı Arama -->
             <div class="max-w-3xl mx-auto search-wrapper relative">
-                <i class="fas fa-search absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 text-xl z-10"></i>
-                <input type="text" id="live-search" placeholder="motor kodu veya marka arayın (örnek: 1.5 crdi, sportage, i20)...">
+                <svg class="w-5 h-5 absolute left-6 top-1/2 transform -translate-y-1/2 text-gray-400 z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <input type="text" id="live-search" class="lowercase" placeholder="motor kodu, marka veya hacim arayın (örnek: d4fb, 1.5 crdi, sportage, i20)...">
             </div>
             
-            <div class="mt-8 flex justify-center gap-4 text-sm font-bold text-gray-400 flex-wrap">
-                <span><i class="fas fa-check text-green-500 mr-2"></i>garantili bloklar</span>
-                <span><i class="fas fa-check text-green-500 mr-2"></i>test edilmiş üniteler</span>
-                <span><i class="fas fa-check text-green-500 mr-2"></i>uzman motor servisi</span>
+            <div class="mt-8 flex justify-center gap-4 text-sm font-bold text-gray-400 flex-wrap lowercase">
+                <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>test edilmiş bloklar</span>
+                <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>sandık motor stokları</span>
+                <span class="flex items-center gap-1"><svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>uzman motor servisi</span>
             </div>
         </div>
     </header>
 
-    <!-- Dinamik Ürün Kataloğu -->
     <section id="katalog" class="py-24 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
                 <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">motor stok listesi</h2>
-                    <p class="text-gray-500 mt-2">tüm hyundai ve KIA blok, kapak ve sandık üniteleri.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white lowercase">motor stok listesi</h2>
+                    <p class="text-gray-500 mt-2 lowercase">tüm hyundai ve KIA blok, kapak ve sandık üniteleri.</p>
                 </div>
-                <!-- Filtreleme Durum Butonları -->
-                <div class="mt-6 md:mt-0 flex gap-2" id="filter-group">
-                    <button class="filter-btn px-6 py-2 rounded-full font-bold text-sm bg-brand-hyundai text-white transition" data-filter="all">tümü</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-bold text-sm bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:bg-brand-hyundai hover:text-white transition" data-filter="hyundai">hyundai</button>
-                    <button class="filter-btn px-6 py-2 rounded-full font-bold text-sm bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:bg-brand-kia hover:text-white transition" data-filter="kia">KIA</button>
+                <div class="mt-6 md:mt-0 flex gap-2 flex-wrap" id="filter-group">
+                    <button class="filter-btn px-6 py-2 rounded-full font-bold text-sm bg-brand-hyundai text-white transition lowercase flex items-center gap-2" data-filter="all">
+                        tümü
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-bold text-sm bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:bg-brand-hyundai hover:text-white transition lowercase flex items-center gap-2" data-filter="hyundai">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg" alt="hyundai" class="h-3 filter-logo dark:invert"> hyundai
+                    </button>
+                    <button class="filter-btn px-6 py-2 rounded-full font-bold text-sm bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 hover:bg-brand-kia hover:text-white transition lowercase flex items-center gap-2" data-filter="kia">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Kia_Motors_2021_logo.svg" alt="kia" class="h-2 filter-logo dark:invert"> KIA
+                    </button>
                 </div>
             </div>
             
-            <!-- Reaktif Veri Ağı -->
             <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <!-- JS render -->
             </div>
             
             <div id="empty-state" class="hidden text-center py-16 reveal">
-                <i class="fas fa-box-open text-5xl text-gray-300 dark:text-gray-600 mb-4"></i>
-                <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-400">kayıt bulunamadı</h3>
-                <p class="text-gray-500 mt-2">farklı bir kod deneyin veya stok sormak için çağrı merkezimizi arayın.</p>
+                <svg class="w-16 h-16 mx-auto text-gray-300 dark:text-gray-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg>
+                <h3 class="text-2xl font-bold text-gray-600 dark:text-gray-400 lowercase">kayıt bulunamadı</h3>
+                <p class="text-gray-500 mt-2 lowercase">farklı bir kod deneyin veya stok sormak için çağrı merkezimizi arayın.</p>
             </div>
         </div>
     </section>
 
-    <!-- Operasyonel Süreç -->
     <section id="surec" class="py-24 bg-brand-light dark:bg-gray-800">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-4xl mx-auto mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-hyundai dark:text-white mb-4">teknik işleyiş ve sevkiyat</h2>
-                <p class="text-gray-600 dark:text-gray-400">depomuzdan çıkan her ürünün standart aşamaları.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-hyundai dark:text-white mb-4 lowercase">teknik işleyiş ve sevkiyat</h2>
+                <p class="text-gray-600 dark:text-gray-400 lowercase">depomuzdan çıkan her ürünün standart aşamaları.</p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-brand-card dark:bg-brand-cardDark p-8 rounded-2xl text-center product-card reveal">
-                    <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-blue-900/30 text-brand-hyundai dark:text-blue-400 rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-microscope"></i>
+                    <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-blue-900/30 text-brand-hyundai dark:text-blue-400 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">kompresyon testleri</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">silindir kapağı ve blok yüzeyleri basınca karşı detaylı test edilerek sağlamlığı merkezimizde onaylanır.</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white lowercase">kompresyon testleri</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm lowercase">silindir kapağı ve blok yüzeyleri basınca karşı test edilerek sağlamlığı merkezimizde onaylanır.</p>
                 </div>
                 
                 <div class="bg-brand-card dark:bg-brand-cardDark p-8 rounded-2xl text-center product-card reveal">
-                    <div class="w-16 h-16 mx-auto bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-box"></i>
+                    <div class="w-16 h-16 mx-auto bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">sıfır sandık motorlar</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">montaja hazır, paketli sıfır sandık ünitelerimiz uygun koşullarda depolanarak koruma altında tutulur.</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white lowercase">sıfır sandık motorlar</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm lowercase">montaja hazır, paketli sıfır sandık ünitelerimiz uygun koşullarda depolanarak tutulur.</p>
                 </div>
                 
                 <div class="bg-brand-card dark:bg-brand-cardDark p-8 rounded-2xl text-center product-card reveal">
-                    <div class="w-16 h-16 mx-auto bg-red-100 dark:bg-red-900/30 text-brand-kia dark:text-red-400 rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fas fa-truck-loading"></i>
+                    <div class="w-16 h-16 mx-auto bg-red-100 dark:bg-red-900/30 text-brand-kia dark:text-red-400 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">güvenli paketleme</h3>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm">onayınız alındıktan sonra ankara yenimahalle depomuzdan darbe emici özel paletlerle adresinize sevk edilir.</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white lowercase">güvenli paketleme</h3>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm lowercase">onayınız alındıktan sonra ankara ostim depomuzdan darbe emici özel paletlerle adresinize sevk edilir.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Motor Rehberi / Blog -->
     <section id="blog" class="py-24 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-4xl mx-auto mb-16 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">motor rehberi</h2>
-                <p class="text-gray-600 dark:text-gray-400">merak edilen teknik bilgilendirmeler.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 lowercase">motor rehberi</h2>
+                <p class="text-gray-600 dark:text-gray-400 lowercase">merak edilen teknik bilgilendirmeler.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="product-card rounded-2xl overflow-hidden reveal bg-white dark:bg-gray-800">
                     <div class="h-40 bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                        <i class="fas fa-cogs text-4xl text-gray-400"></i>
+                        <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">yarım motor neleri kapsar?</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">yarım motor, genellikle sadece motor bloğu, pistonlar ve krank milini içeren ancak silindir kapağı bulunmayan alt üniteye verilen isimdir.</p>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 lowercase">yarım motor neleri kapsar?</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 lowercase">yarım motor, genellikle sadece motor bloğu, pistonlar ve krank milini içeren ancak silindir kapağı bulunmayan alt üniteye verilen isimdir.</p>
                     </div>
                 </div>
 
                 <div class="product-card rounded-2xl overflow-hidden reveal bg-white dark:bg-gray-800">
                     <div class="h-40 bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                        <i class="fas fa-check-circle text-4xl text-gray-400"></i>
+                        <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">çıkma motor alırken dikkat!</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">blok yüzeyinde kılcal çatlak olmaması ve kompresyon değerlerinin standartlarda olması esastır. ünitelerimiz bu aşamalardan geçmektedir.</p>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 lowercase">çıkma motor alırken dikkat!</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 lowercase">blok yüzeyinde kılcal çatlak olmaması ve kompresyon değerlerinin standartlarda olması esastır. ünitelerimiz bu aşamalardan geçmektedir.</p>
                     </div>
                 </div>
 
                 <div class="product-card rounded-2xl overflow-hidden reveal bg-white dark:bg-gray-800">
                     <div class="h-40 bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                        <i class="fas fa-box-open text-4xl text-gray-400"></i>
+                        <svg class="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">sıfır sandık motor avantajları</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400">direkt montaja hazır olarak gelir. aşınma olmadığı için son derece uzun ömürlüdür. stoklarımızdaki sandık üniteler için bizi arayabilirsiniz.</p>
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2 lowercase">sıfır sandık motor avantajları</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 lowercase">direkt montaja hazır olarak gelir. aşınma olmadığı için son derece uzun ömürlüdür. stoklarımızdaki sandık üniteler için bizi arayabilirsiniz.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEO 81 İl Dinamik Render Alanı -->
     <section id="teslimat" class="py-24 bg-brand-light dark:bg-gray-800 border-t border-gray-200 dark:border-gray-800">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-4xl mx-auto mb-12 reveal">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">81 ile garantili teslimat</h2>
-                <p class="text-gray-600 dark:text-gray-400">ankara merkez depomuzdan aşağıdaki tüm illere anlaşmalı sevkiyat gerçekleştirilmektedir.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 lowercase">81 ile garantili teslimat</h2>
+                <p class="text-gray-600 dark:text-gray-400 lowercase">ankara merkez depomuzdan aşağıdaki tüm illere anlaşmalı sevkiyat gerçekleştirilmektedir.</p>
             </div>
             
             <div class="max-w-6xl mx-auto text-center reveal" id="cities-grid">
@@ -273,52 +275,48 @@
         </div>
     </section>
 
-    <!-- İletişim Alanı -->
     <section id="iletisim" class="py-24 bg-brand-dark text-white">
         <div class="container mx-auto px-6 text-center reveal">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12">iletişim bilgileri</h2>
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 lowercase">iletişim bilgileri</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div class="bg-gray-800/50 border border-gray-700 p-10 rounded-3xl product-card">
-                    <i class="fab fa-whatsapp text-4xl text-green-400 mb-6"></i>
-                    <h3 class="text-lg font-bold text-gray-300 mb-2">whatsapp bilgi hattı</h3>
+                    <svg class="w-10 h-10 mx-auto text-green-400 mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    <h3 class="text-lg font-bold text-gray-300 mb-2 lowercase">whatsapp bilgi hattı</h3>
                     <a href="https://wa.me/905537383806" class="text-2xl font-bold text-white hover:text-green-400 transition block mb-2">0553 738 38 06</a>
                 </div>
                 
                 <div class="bg-brand-hyundai border border-blue-500/30 p-10 rounded-3xl product-card transform md:scale-105 shadow-xl">
-                    <i class="fas fa-headset text-4xl text-blue-300 mb-6"></i>
-                    <h3 class="text-lg font-bold text-blue-200 mb-2">çağrı merkezi</h3>
+                    <svg class="w-10 h-10 mx-auto text-blue-300 mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.73 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+                    <h3 class="text-lg font-bold text-blue-200 mb-2 lowercase">çağrı merkezi</h3>
                     <a href="tel:05348441861" class="text-2xl font-bold text-white hover:text-blue-200 transition block mb-6">0534 844 18 61</a>
-                    <a href="tel:05348441861" class="inline-block px-8 py-2 bg-white text-brand-hyundai font-bold rounded-full text-sm hover:bg-gray-100 transition">hemen ara</a>
+                    <a href="tel:05348441861" class="inline-flex items-center gap-2 px-8 py-2 bg-white text-brand-hyundai font-bold rounded-full text-sm hover:bg-gray-100 transition lowercase">hemen ara</a>
                 </div>
                 
                 <div class="bg-gray-800/50 border border-gray-700 p-10 rounded-3xl product-card">
-                    <i class="fas fa-map-marker-alt text-4xl text-red-400 mb-6"></i>
-                    <h3 class="text-lg font-bold text-gray-300 mb-2">merkez depo adresi</h3>
-                    <address class="not-italic text-gray-300 text-sm font-bold leading-relaxed">
+                    <svg class="w-10 h-10 mx-auto text-red-400 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <h3 class="text-lg font-bold text-gray-300 mb-2 lowercase">merkez depo adresi</h3>
+                    <address class="not-italic text-gray-300 text-sm font-bold leading-relaxed lowercase">
                         serhat mah. 1126. cad.<br>
-                        no: 14 yenimahalle<br>
-                        ankara
+                        no: 14 ostim / ankara
                     </address>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black text-gray-500 py-8 border-t border-gray-900">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <div>
-                <h4 class="text-gray-400 font-bold mb-1 text-sm">cihat hyundai motor merkezi</h4>
-                <p class="text-xs font-bold">&copy; 2026 tüm hakları saklıdır.</p>
+                <h4 class="text-gray-400 font-bold mb-1 text-sm lowercase">cihat motor merkezi</h4>
+                <p class="text-xs font-bold lowercase">&copy; 2026 tüm hakları saklıdır.</p>
             </div>
-            <div class="mt-4 md:mt-0 text-xs font-bold text-gray-600">
+            <div class="mt-4 md:mt-0 text-xs font-bold text-gray-600 lowercase">
                 altyapı: nokta sosyal medya
             </div>
         </div>
     </footer>
 
-    <!-- Gelişmiş JavaScript OOP ve Durum Yönetim Mimarisi -->
     <script>
         class MotorApp {
             constructor() {
@@ -328,23 +326,48 @@
                     theme: localStorage.getItem('theme') || 'light'
                 };
 
+                // Genişletilmiş Motor Kodlu Veritabanı
                 this.db = [
-                    { marka: 'hyundai', model: 'accent era', motor: '1.4 mpi', tip: 'çıkma motor', etiket: 'benzinli' },
-                    { marka: 'hyundai', model: 'accent era', motor: '1.5 crdi', tip: 'çıkma motor', etiket: 'dizel' },
-                    { marka: 'hyundai', model: 'accent era', motor: '1.5 crdi', tip: 'sandık motor', etiket: 'sıfır' },
-                    { marka: 'hyundai', model: 'accent blue', motor: '1.6 crdi', tip: 'çıkma motor', etiket: 'dizel' },
-                    { marka: 'hyundai', model: 'i20', motor: '1.2 mpi', tip: 'çıkma motor', etiket: 'benzinli' },
-                    { marka: 'hyundai', model: 'i20', motor: '1.4 mpi', tip: 'sandık motor', etiket: 'sıfır' },
-                    { marka: 'hyundai', model: 'i30', motor: '1.6 crdi', tip: 'yarım motor', etiket: 'dizel' },
-                    { marka: 'hyundai', model: 'tucson', motor: '1.6 t-gdi', tip: 'sandık motor', etiket: 'sıfır' },
-                    { marka: 'hyundai', model: 'tucson', motor: '1.6 crdi', tip: 'çıkma motor', etiket: 'dizel' },
-                    { marka: 'hyundai', model: 'h100', motor: '2.5 d', tip: 'çıkma motor', etiket: 'ticari' },
-                    { marka: 'KIA', model: 'sportage', motor: '1.6 gdi', tip: 'çıkma motor', etiket: 'benzinli' },
-                    { marka: 'KIA', model: 'sportage', motor: '1.6 crdi', tip: 'yarım motor', etiket: 'dizel' },
-                    { marka: 'KIA', model: 'ceed', motor: '1.6 crdi', tip: 'çıkma motor', etiket: 'dizel' },
-                    { marka: 'KIA', model: 'sorento', motor: '2.5 crdi', tip: 'çıkma motor', etiket: 'dizel' },
-                    { marka: 'KIA', model: 'bongo', motor: '2.5 tci', tip: 'sandık motor', etiket: 'sıfır' },
-                    { marka: 'KIA', model: 'rio', motor: '1.4 mpi', tip: 'çıkma motor', etiket: 'benzinli' }
+                    { marka: 'hyundai', model: 'accent era', motor: '1.4 mpi (g4fa)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'accent era', motor: '1.5 crdi (d4fa)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'accent era', motor: '1.5 crdi (d4fa)', tip: 'sandık motor', etiket: 'sıfır' },
+                    { marka: 'hyundai', model: 'accent blue', motor: '1.6 crdi (d4fb)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'accent blue', motor: '1.4 mpi (g4fa)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'i20', motor: '1.2 mpi (g4la)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'i20', motor: '1.4 mpi (g4fa)', tip: 'sandık motor', etiket: 'sıfır' },
+                    { marka: 'hyundai', model: 'i20', motor: '1.4 crdi (d4fc)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'i30', motor: '1.6 crdi (d4fb)', tip: 'yarım motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'i30', motor: '1.6 gdi (g4fd)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'tucson', motor: '1.6 t-gdi (g4fj)', tip: 'sandık motor', etiket: 'sıfır' },
+                    { marka: 'hyundai', model: 'tucson', motor: '1.6 crdi (d4fe)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'tucson', motor: '2.0 crdi (d4ea)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'getz', motor: '1.3 mpi (g4ea)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'getz', motor: '1.4 mpi (g4ee)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'getz', motor: '1.5 crdi (d4fa)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'elantra', motor: '1.6 mpi (g4fg)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'elantra', motor: '1.6 crdi (d4fb)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'hyundai', model: 'starex', motor: '2.5 crdi (d4cb)', tip: 'çıkma motor', etiket: 'ticari' },
+                    { marka: 'hyundai', model: 'starex', motor: '2.5 tci (d4bh)', tip: 'çıkma motor', etiket: 'ticari' },
+                    { marka: 'hyundai', model: 'h100', motor: '2.5 d (d4ba)', tip: 'çıkma motor', etiket: 'ticari' },
+                    { marka: 'hyundai', model: 'ix35', motor: '1.6 gdi (g4fd)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'hyundai', model: 'ix35', motor: '2.0 crdi (d4ha)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'sportage', motor: '1.6 gdi (g4fd)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'KIA', model: 'sportage', motor: '1.6 crdi (d4fe)', tip: 'yarım motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'sportage', motor: '2.0 crdi (d4ea)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'ceed', motor: '1.6 crdi (d4fb)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'ceed', motor: '1.4 mpi (g4fa)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'KIA', model: 'sorento', motor: '2.5 crdi (d4cb)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'sorento', motor: '2.2 crdi (d4hb)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'bongo', motor: '2.5 tci (d4bh)', tip: 'sandık motor', etiket: 'sıfır' },
+                    { marka: 'KIA', model: 'bongo', motor: '2.9 crdi (j3)', tip: 'çıkma motor', etiket: 'ticari' },
+                    { marka: 'KIA', model: 'rio', motor: '1.4 mpi (g4fa)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'KIA', model: 'rio', motor: '1.2 mpi (g4la)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'KIA', model: 'rio', motor: '1.4 crdi (d4fc)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'cerato', motor: '1.6 crdi (d4fb)', tip: 'çıkma motor', etiket: 'dizel' },
+                    { marka: 'KIA', model: 'cerato', motor: '1.6 mpi (g4fc)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'KIA', model: 'picanto', motor: '1.0 mpi (g3la)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'KIA', model: 'picanto', motor: '1.2 mpi (g4la)', tip: 'çıkma motor', etiket: 'benzinli' },
+                    { marka: 'KIA', model: 'stonic', motor: '1.4 mpi (g4lc)', tip: 'çıkma motor', etiket: 'benzinli' }
                 ];
 
                 this.cities = ["adana", "adıyaman", "afyonkarahisar", "ağrı", "amasya", "ankara", "antalya", "artvin", "aydın", "balıkesir", "bilecik", "bingöl", "bitlis", "bolu", "burdur", "bursa", "çanakkale", "çankırı", "çorum", "denizli", "diyarbakır", "edirne", "elazığ", "erzincan", "erzurum", "eskişehir", "gaziantep", "giresun", "gümüşhane", "hakkari", "hatay", "ısparta", "mersin", "istanbul", "izmir", "kars", "kastamonu", "kayseri", "kırklareli", "kırşehir", "kocaeli", "konya", "kütahya", "malatya", "manisa", "kahramanmaraş", "mardin", "muğla", "muş", "nevşehir", "niğde", "ordu", "rize", "sakarya", "samsun", "siirt", "sinop", "sivas", "tekirdağ", "tokat", "trabzon", "tunceli", "şanlıurfa", "uşak", "van", "yozgat", "zonguldak", "aksaray", "bayburt", "karaman", "kırıkkale", "batman", "şırnak", "bartın", "ardahan", "ığdır", "yalova", "karabük", "kilis", "osmaniye", "düzce"];
@@ -371,6 +394,7 @@
                 this.citiesGrid = document.getElementById('cities-grid');
                 this.preloader = document.getElementById('loader-screen');
                 this.reveals = document.querySelectorAll('.reveal');
+                this.filterLogos = document.querySelectorAll('.filter-logo');
             }
 
             bindEvents() {
@@ -382,10 +406,11 @@
 
                 this.filterBtns.forEach(btn => {
                     btn.addEventListener('click', (e) => {
-                        this.state.filter = e.target.dataset.filter;
+                        const target = e.currentTarget;
+                        this.state.filter = target.dataset.filter;
                         this.state.search = '';
                         this.searchInput.value = '';
-                        this.updateFilterUI(e.target);
+                        this.updateFilterUI(target);
                         this.renderCatalog();
                     });
                 });
@@ -447,12 +472,15 @@
                         b.classList.remove('bg-gray-100', 'text-gray-700', 'dark:bg-gray-800', 'dark:text-gray-300');
                     }
                 });
+                this.filterLogos.forEach(logo => logo.classList.add('dark:invert'));
             }
 
             updateFilterUI(target) {
                 this.filterBtns.forEach(b => {
                     b.classList.remove('bg-brand-hyundai', 'bg-brand-kia', 'text-white');
                     b.classList.add('bg-gray-100', 'text-gray-700', 'dark:bg-gray-800', 'dark:text-gray-300');
+                    const img = b.querySelector('img');
+                    if(img) img.classList.add('dark:invert');
                 });
 
                 if (this.state.filter === 'kia') {
@@ -461,6 +489,9 @@
                     target.classList.add('bg-brand-hyundai', 'text-white');
                 }
                 target.classList.remove('bg-gray-100', 'text-gray-700', 'dark:bg-gray-800', 'dark:text-gray-300');
+                
+                const activeImg = target.querySelector('img');
+                if(activeImg) activeImg.classList.remove('dark:invert');
             }
 
             getFilteredData() {
@@ -484,20 +515,31 @@
                     data.forEach(item => {
                         const isHyundai = item.marka === 'hyundai';
                         const colorClass = isHyundai ? 'text-brand-hyundai dark:text-blue-400' : 'text-brand-kia dark:text-red-400';
+                        const logoSrc = isHyundai ? 'https://upload.wikimedia.org/wikipedia/commons/4/44/Hyundai_Motor_Company_logo.svg' : 'https://upload.wikimedia.org/wikipedia/commons/4/47/Kia_Motors_2021_logo.svg';
+                        const logoH = isHyundai ? 'h-3' : 'h-2';
                         
                         const div = document.createElement('div');
                         div.className = "bg-brand-card dark:bg-brand-cardDark rounded-2xl p-6 product-card flex flex-col";
                         div.innerHTML = `
                             <div class="flex justify-between items-start mb-4">
-                                <span class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded text-gray-500">${item.marka}</span>
-                                <span class="text-xs font-bold text-gray-400"><i class="fas fa-tag mr-1"></i>${item.etiket}</span>
+                                <span class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded text-gray-500 lowercase flex items-center gap-2">
+                                    <img src="${logoSrc}" alt="${item.marka}" class="${logoH} dark:invert opacity-70"> ${item.marka}
+                                </span>
+                                <span class="text-xs font-bold text-gray-400 lowercase flex items-center gap-1">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
+                                    ${item.etiket}
+                                </span>
                             </div>
-                            <h3 class="text-xl font-bold ${colorClass} mb-2">${item.marka} ${item.model} ${item.motor} <br>${item.tip}</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-6 font-bold">ankara merkezimizden garantili motor ünitesi.</p>
+                            <h3 class="text-xl font-bold ${colorClass} mb-2 lowercase">${item.marka} ${item.model} ${item.motor} <br>${item.tip}</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-6 font-bold lowercase">ankara merkezimizden garantili motor ünitesi.</p>
                             
                             <div class="mt-auto flex gap-2">
-                                <a href="tel:05348441861" class="flex-1 text-center bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-bold py-3 rounded-xl hover:bg-brand-hyundai hover:text-white transition text-sm flex items-center justify-center gap-2"><i class="fas fa-phone"></i> fiyat sor</a>
-                                <a href="https://wa.me/905537383806" class="flex-1 text-center bg-green-500/10 text-green-600 dark:text-green-400 font-bold py-3 rounded-xl hover:bg-green-500 hover:text-white transition text-sm flex items-center justify-center gap-2"><i class="fab fa-whatsapp text-lg"></i> mesaj</a>
+                                <a href="tel:05348441861" class="flex-1 text-center bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-bold py-2 rounded-xl hover:bg-brand-hyundai hover:text-white transition text-sm flex items-center justify-center gap-2 lowercase">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.73 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg> fiyat sor
+                                </a>
+                                <a href="https://wa.me/905537383806" class="flex-1 text-center bg-green-500/10 text-green-600 dark:text-green-400 font-bold py-2 rounded-xl hover:bg-green-500 hover:text-white transition text-sm flex items-center justify-center gap-2 lowercase">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> mesaj
+                                </a>
                             </div>
                         `;
                         frag.appendChild(div);
