@@ -8,8 +8,8 @@
     <meta name="description" content="ankara yenimahalle merkezli depomuzdan türkiye'nin tüm illerine test edilmiş hyundai ve KIA çıkma motor, sıfır sandık motor, yarım motor ve silindir kapağı.">
     <meta name="keywords" content="hyundai çıkma motor, KIA çıkma motor, hyundai sandık motor, KIA sandık motor, ankara çıkma motor, motor bloğu, silindir kapağı, yarım motor, komple motor, boş motor, dolu motor">
     
-    <!-- İkonlar -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- En Stabil İkon Kütüphanesi (Simgelerin %100 Çalıştığı Versiyon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!-- Tailwind CSS (Konfigürasyonlu) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -51,7 +51,7 @@
         .product-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
         .dark .product-card:hover { box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5); }
 
-        /* Kendi Yazdığımız Intersection Observer Animasyon Sınıfları (Harici kütüphane bağımlılığını kaldırdık) */
+        /* Kendi Yazdığımız Animasyon Sınıfları */
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
@@ -115,7 +115,7 @@
                     <i class="fas fa-moon dark:hidden"></i>
                     <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
                 </button>
-                <a href="tel:05537383806" class="hidden md:block px-6 py-2 bg-brand-hyundai text-white rounded-full font-bold text-xs hover:bg-blue-900 transition">
+                <a href="tel:05537383806" class="hidden md:flex items-center px-6 py-2 bg-brand-hyundai text-white rounded-full font-bold text-xs hover:bg-blue-900 transition">
                     hızlı fiyat al
                 </a>
             </div>
@@ -145,9 +145,9 @@
             </div>
             
             <div class="mt-8 flex justify-center gap-4 text-sm font-bold text-gray-400 flex-wrap">
-                <span><i class="fas fa-check text-green-500 mr-1"></i> garantili bloklar</span>
-                <span><i class="fas fa-check text-green-500 mr-1"></i> test edilmiş üniteler</span>
-                <span><i class="fas fa-check text-green-500 mr-1"></i> uzman motor servisi</span>
+                <span><i class="fas fa-check text-green-500 mr-2"></i>garantili bloklar</span>
+                <span><i class="fas fa-check text-green-500 mr-2"></i>test edilmiş üniteler</span>
+                <span><i class="fas fa-check text-green-500 mr-2"></i>uzman motor servisi</span>
             </div>
         </div>
     </header>
@@ -322,14 +322,12 @@
     <script>
         class MotorApp {
             constructor() {
-                // Veritabanı State
                 this.state = {
                     filter: 'all',
                     search: '',
                     theme: localStorage.getItem('theme') || 'light'
                 };
 
-                // Motor Veritabanı
                 this.db = [
                     { marka: 'hyundai', model: 'accent era', motor: '1.4 mpi', tip: 'çıkma motor', etiket: 'benzinli' },
                     { marka: 'hyundai', model: 'accent era', motor: '1.5 crdi', tip: 'çıkma motor', etiket: 'dizel' },
@@ -415,7 +413,6 @@
             }
 
             setupIntersectionObserver() {
-                // Harici animasyon kütüphanesi yerine tarayıcı tabanlı yüksek performanslı izleyici
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -493,14 +490,14 @@
                         div.innerHTML = `
                             <div class="flex justify-between items-start mb-4">
                                 <span class="text-xs font-bold px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded text-gray-500">${item.marka}</span>
-                                <span class="text-xs font-bold text-gray-400"><i class="fas fa-tag"></i> ${item.etiket}</span>
+                                <span class="text-xs font-bold text-gray-400"><i class="fas fa-tag mr-1"></i>${item.etiket}</span>
                             </div>
                             <h3 class="text-xl font-bold ${colorClass} mb-2">${item.marka} ${item.model} ${item.motor} <br>${item.tip}</h3>
                             <p class="text-sm text-gray-500 dark:text-gray-400 mb-6 font-bold">ankara merkezimizden garantili motor ünitesi.</p>
                             
                             <div class="mt-auto flex gap-2">
-                                <a href="tel:05348441861" class="flex-1 text-center bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-bold py-2 rounded-xl hover:bg-brand-hyundai hover:text-white transition text-sm"><i class="fas fa-phone mr-1"></i> fiyat sor</a>
-                                <a href="https://wa.me/905537383806" class="flex-1 text-center bg-green-500/10 text-green-600 dark:text-green-400 font-bold py-2 rounded-xl hover:bg-green-500 hover:text-white transition text-sm"><i class="fab fa-whatsapp"></i> mesaj</a>
+                                <a href="tel:05348441861" class="flex-1 text-center bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-bold py-3 rounded-xl hover:bg-brand-hyundai hover:text-white transition text-sm flex items-center justify-center gap-2"><i class="fas fa-phone"></i> fiyat sor</a>
+                                <a href="https://wa.me/905537383806" class="flex-1 text-center bg-green-500/10 text-green-600 dark:text-green-400 font-bold py-3 rounded-xl hover:bg-green-500 hover:text-white transition text-sm flex items-center justify-center gap-2"><i class="fab fa-whatsapp text-lg"></i> mesaj</a>
                             </div>
                         `;
                         frag.appendChild(div);
@@ -510,7 +507,6 @@
             }
         }
 
-        // Uygulamayı Başlat
         document.addEventListener('DOMContentLoaded', () => new MotorApp());
     </script>
 </body>
